@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+    
+    <!-- Custom style for navbar -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">TECHNICALLY SOUND</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+            <!-- Button to open the modal sign up form -->
+              <button onclick="document.getElementById('id01').style.display='block'">SIGN UP</button>
+
+              <!-- The Modal -->
+              <div id="id01" class="modal">
+              <span onclick="document.getElementById('id01').style.display='none'"
+              class="close" title="Close Modal">&times;</span>
+
+              <!-- Modal Content -->
+              <form class="modal-content animate" action="/action_page.php">
+
+                <div class="container">
+                  <h2>Sign Up</h2>
+                  <p>Please fill in this form to create an account.</p>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+              
+                  <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</label>
+
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                  <button type="submit">Sumbit</button>
+
+                  <div class="container" style="background-color:#f1f1f1">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  </div>
+                </div>
+              </form>
+            </div> </li>
+
+            <!-- Button to open the modal login form -->
+            <li><button onclick="document.getElementById('id02').style.display='block'">LOGIN</button>
+
+              <!-- The Modal -->
+              <div id="id02" class="modal">
+              <span onclick="document.getElementById('id02').style.display='none'"
+              class="close" title="Close Modal">&times;</span>
+
+              <!-- Modal Content -->
+              <form class="modal-content animate" action="/action_page.php">
+
+                <div class="container">
+                  <h2>Login</h2>
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <button type="submit">Login</button>
+                  <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">TECHNICALLY SOUND</h1>
+          <h2 class="masthead-subheading mb-0">LET'S FIND THE PERFECT<br> SONG FOR YOUR PLAYLIST</h2>
+          <a href="http://localhost:63342/technicallysound(1)/review.html?_ijt=5b0j8p1eqisjcl8o0j62prmh6k" class="btn-xl">JOIN US</a>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
