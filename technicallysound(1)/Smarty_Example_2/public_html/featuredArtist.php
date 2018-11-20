@@ -28,9 +28,10 @@ if(isset($_POST["search2"])) {
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->bindParam(':search', $search_var);
     $stmt2->execute();
-} else {
-    $message = "";
-    $smarty->assign("message", $message);
+    $artist_list = array();
+    while($row = $stmt2->fetch(PDO::FETCH_ASSOC)) {
+        $artist_list[] = $row;
+    }
 }
 
 $smarty->assign("artist_list", $artist_list);
