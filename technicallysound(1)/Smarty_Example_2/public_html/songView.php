@@ -9,7 +9,7 @@
 include "../private_html/config.inc.php";
 include "../private_html/dbconfig.inc.php";
 
-if(isset($_POST)) {
+if(isset($_POST["search2"])) {
     $search_var = "%".$_POST["search2"]."%";
     $sql = "SELECT * FROM Song WHERE Title LIKE ':search'";
     $stmt = $pdo->prepare($sql);
