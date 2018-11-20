@@ -20,7 +20,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="songReview.php">Song Reviews</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="songReview.php">Playlists</a>
+                    <a class="dropdown-item" href="songPlaylist.php">Playlists</a>
                 </div>
             </li>
             <li class="nav-item dropdown {if $active == "Artists"}active{/if}">
