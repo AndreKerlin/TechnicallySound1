@@ -10,6 +10,16 @@
 
     <title>Song Reviews</title>
 
+    {*<!-- Bootstrap CSS -->*}
+    {*<link rel="stylesheet" type="text/css" href="one-page-wonder.css"/> <!-- this css sheet was taken from Bootstrap -->*}
+
+    {*<! -- CSS from Andre's ViewArtist.html to incorporate modal -->*}
+    {*<link href="ViewArtistStyle.css" rel="stylesheet">*}
+    {*<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">*}
+    {*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">*}
+
+    {*<!-- Font Awesome -->*}
+    {*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">*}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="one-page-wonder.css"/> <!-- this css sheet was taken from Bootstrap -->
 

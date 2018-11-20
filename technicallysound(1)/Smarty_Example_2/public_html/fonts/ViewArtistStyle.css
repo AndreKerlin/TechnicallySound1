@@ -1,0 +1,257 @@
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+
+        background-repeat: no-repeat;
+        background-size: 1500px 1300px;
+    }
+}
+
+.navbar{
+    margin-top: -60px;
+
+}
+.navbar-brand{
+    font-size: x-large;
+}
+
+.nav-link{
+    font-size: large;
+}
+nav{
+    padding-bottom: -20px;
+}
+
+.artist_image{
+    width: 750px;
+    height: 500px;
+}
+
+.img-fluid{
+    width: 250px;
+    height: 250px;
+}
+
+.Post-Malone{
+    text-align: center;
+    font-size: 65px;
+    color: rgb(69, 163, 184);
+}
+
+
+.bio{
+    font-size: 40px;
+    color: rgb(69,163,184);
+
+}
+
+p{
+    font-size: medium;
+
+}
+
+li{
+    font-size: small;
+}
+.Related-music-genre{
+    color: rgb(69,163,184);
+}
+
+/* Set a style for sign-in buttons */
+button {
+    /*background-color: #852148;*/
+    font-size: small;
+    color: white;
+    margin-top: 35px;
+    padding: 1.5rem 3rem;
+    letter-spacing: 0.1rem;
+    border-radius: 25px;
+}
+
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+.btn-primary{
+    background-color: #2196F3; !important;
+}
+.btn1 {
+    font-size: small;  !important;
+    background-color: #2196F3;
+}
+
+.btn2{
+    font-size: small;!important;
+    background-color: red;
+}
+
+.img-fluid:hover{
+    opacity: 0.8;
+}
+#myBtn{
+    color: white;
+    background-color: #852148;
+}
+h2{
+    text-align: center;
+    color: rgb(69, 163, 184);
+
+}
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+h3{
+    font-family-sans-serif: -apple-system;
+    font-size: 1.75rem;
+}
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+
+    margin-left: 20px;
+    border: none;
+    float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 2em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+.card-footer{
+    margin-bottom: 30px;
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+.popular_albums{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(69, 163, 184);
+    text-align: center;
+    font-size: xx-large;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 120px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: rgb(70, 101,107);
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(70, 101,107);
+    color: white;
+}
+
+.btn-primary{
+    background-color: rgb(133 ,33,72);
+    border-radius: 25px;
+    color: white;
+}
+.btn-default {
+    border-radius: 25px;
+    background-color: rgb(70, 101,107);
+    color: white;
+}
+
+.checked{
+    color: orange;
+}
+
+.card-footer{
+    margin-top: -50px;
+    background-color: transparent;
+    border-top: transparent;
+}
+footer{
+    margin-top: 40px;
+}
