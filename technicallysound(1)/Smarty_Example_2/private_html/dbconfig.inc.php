@@ -5,14 +5,12 @@
    ------------------------------------------------------------------------------- */
 #
 # Set database constants
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-#
-#  Begin the session
-session_start();
-#
+define('DB_USER', 'admincis');
+define('DB_PASSWORD', 'live7heCod3');
+define('DB_NAME', 'MusicDB');
+
 #  Connect to the database
-$db_name = "";
+$db_name = DB_NAME;
 $username = DB_USER;
 $password = DB_PASSWORD;
 try {
@@ -22,9 +20,12 @@ try {
      *     "mysql:dbname=name;host=localhost"
      *     where "name" is the name of the database
      */
-    $dsn = "mysql:" . "dbname=" . $db_name . ";" . "host=localhost";
+    $dsn = "mysql:dbname=" . DB_NAME . ";host=technicallysound.cs.messiah.edu";
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 } catch (PDOException $e) {
     echo 'ERROR: ' . $e->getMessage();
 }
+
+//#  Begin the session
+//session_start();
