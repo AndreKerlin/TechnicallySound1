@@ -26,16 +26,13 @@
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a class="navbar-brand" href="http://localhost:63342/technicallysound(1)/home.html?_ijt=iho76uredcmf2f84ab6a8li4vp">Technically Sound</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto"><li class="nav-item "><a class="nav-link" href="#">My Account<span class="sr-only">(current)</span></a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="http://localhost:63342/technicallysound(1)/addSongs.html?_ijt=jg1sr6d8ihar769jvg74ur94fs#" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Songs</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Add Song</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Songs List</a><a class="dropdown-item" href="http://localhost:63342/technicallysound(1)/ViewArtist.html?_ijt=7snho6nn2d8rcmq6hh4pgqghb8">Song Reviews</a></div></li><li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Artists</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Add Artist</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Artist List</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Artist Reviews</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="http://localhost:63342/technicallysound(1)/review.html?_ijt=pb6db6gv2j118u10ra093n0bqd" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Albums</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Add Album</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Album List</a><div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Album Reviews</a></div></li></ul></div></nav>
-
+{include "subNav.tpl"}
 <!-- Page Content -->
 <div class="container">
 
     <div class="row">
         <div class = "col-md-4 offset-md-8">
-        <form class="example m-2" action="../featuredArtist.php" method="post">
+        <form class="example m-2" action="featuredArtist.php" method="post">
             <input class ="searchbar" type="text" placeholder="Search By Artist" name="search2">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -50,10 +47,10 @@
                     {foreach $artist_list as $Artists}
                     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
-                            <a href="../ViewArtist.php"><img class="card-img-top" src="../../pictures/{$Artists['Picture_File']}" alt=""></a>
+                            <a href="ViewArtist.php?id={$Artists['Artist_ID']}"><img class="card-img-top" src="../../pictures/{$Artists['Picture_File']}" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="../ViewArtist.php?id={$Artists['Artist_ID']}">{$Artists['Artist_Name']}</a>
+                                    <a href="ViewArtist.php?id={$Artists['Artist_ID']}">{$Artists['Artist_Name']}</a>
                                     <a aria-label="Delete" class="btn btn-primary" href="#">
                                         <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i></a>
                                     <a aria-label="Delete" class="btn btn-danger" href="#">
