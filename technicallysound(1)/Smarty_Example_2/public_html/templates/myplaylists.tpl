@@ -25,16 +25,104 @@
         <h1 class="my-4">My Playlists</h1>
     </div>
 </div>
+
 <div class="row">
+
+    {*<div class="col-md-4 offset-md-8">*}
+
+    {*</div>*}
     <div class="col-md-4 offset-md-8">
+
         <form class="example m-2" action="{$WEB_URL}songList.php" method="post">
             <input class ="searchbar" type="text" placeholder="Search by song title.." name="search2">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
+        <span>
+            <button id="newlist" class="icon_tag" href="#">Create a new playlist<i class="mx-2 fas fa-plus"></i></button>
+    </span>
+    </div>
+
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Create a new playlist!</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <table width="100%" border="0">
+                    <div class="col-md-9 col-md-offset-0">
+                        <tr><td width="77%">
+                                <div class="">
+                                    <form class="form-horizontal" action="send.php" method="post">
+                                        <fieldset>
+
+                                            <!-- Name input-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="newplay">Playlist Name</label>
+                                                <div class="col-md-9">
+                                                    <input id="newplay" name="newplay" type="text" placeholder="A name for your playlist" class="form-control">
+                                                </div>
+                                            </div>
+
+
+
+                            </td>
+                            <td align="center" valign="top" width="23%">
+                                <!-- Form actions -->
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-md">Submit</button>
+                                        <button type="reset" class="btn btn-default btn-md">Clear</button>
+                                    </div>
+                                </div>
+                                </fieldset>
+                                </form>
+                    </div>
+            </div>
+            </td>
+            </tr>
+            </table>
+        </div>
+        <div class="modal-footer">
+        </div>
     </div>
 
 </div>
 
+</div>
+
+<script>// Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("newlist");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</div
 <!-- Song List -->
 <div class="row">
     <div class="col-md-8 offset-md-2">
