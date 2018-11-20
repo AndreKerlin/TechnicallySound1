@@ -3,21 +3,21 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$user_id = $password = $confirm_password = "";
-$user_id_err = $password_err = $confirm_password_err = "";
+$username = $password = $confirm_password = "";
+$username_err = $password_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Validate username
-    if(empty(trim($_POST["user_id"]))){
+    if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a username.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM user WHERE user_id = :u";
+        $sql = "SELECT id FROM user WHERE username = :u";
         $stmt = $pdo -> prepare($sql);
-        $stmt -> bindParam(":u", $_POST['user_id']);
-        $stmt -> execute();
+        $stmt -> bindParam(":u", $_POST['username']);
+        // $stmt -> execute();
         if ($stmt -> rowCount() > 0) {
             echo 'ERROR: ' . $e->getMessage();
             }
@@ -44,15 +44,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Check input errors before inserting in database
-    if(empty($user_id_err) && empty($password_err) && empty($confirm_password_err)){
+    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO user (user_id, password) VALUES (?, ?)";
+        $sql = "INSERT INTO user (username, password) VALUES (?, ?)";
          
         $stmt = $pdo -> prepare($sql);
-        $stmt = bindParam(":u", $_POST['user_id']);
-        $stmt = bindParam(":p", $_POST['password']);
-        $stmt -> execute();
         if ($stmt -> rowCount() > 0) {
             echo 'ERROR: ' . $e->getMessage();
         }  
@@ -115,10 +112,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($user_id_err)) ? 'has-error' : ''; ?>">
+            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
-                <input type="text" name="username" class="form-control" value="<?php echo $user_id; ?>">
-                <span class="help-block"><?php echo $user_id_err; ?></span>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>Password</label>

@@ -29,22 +29,18 @@
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a class="navbar-brand" href="http://localhost:63342/technicallysound(1)/home.html?_ijt=iho76uredcmf2f84ab6a8li4vp">Technically Sound</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="#">My Account<span class="sr-only">(current)</span></a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="http://localhost:63342/technicallysound(1)/addSongs.html?_ijt=jg1sr6d8ihar769jvg74ur94fs#" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Songs</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Add Song</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Songs List</a><a class="dropdown-item" href="#">Song Reviews</a></div></li><li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="http://localhost:63342/technicallysound(1)/FeaturedArtists.html?_ijt=n5k46ct4bqlq6gi0pal1lp32lt#" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Artists</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Add Artist</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Artist List</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Artist Reviews</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="http://localhost:63342/technicallysound(1)/review.html?_ijt=pb6db6gv2j118u10ra093n0bqd" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Albums</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Add Album</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Album List</a><div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Album Reviews</a></div></li></ul></div></nav>
-
+{include "subNav.tpl"}
 <!-- Page Content -->
 <div class="container">
 
     <!-- Portfolio Item Heading -->
-    <h1 class="Post-Malone">Post Malone
-    </h1>
+    <h1 class="Post-Malone">{$artist_info['Artist_Name']}</h1>
 
     <!-- Portfolio Item Row -->
     <div class="row">
 
         <div class="col-md-8">
-            <img class="artist_image" src="../../pictures/post-malone-view.jpg" alt="">
+            <img class="artist_image" src="../../pictures/{$artist_info['Picture_File']}" alt="">
         </div>
 
         <div class="col-md-4">
@@ -117,29 +113,31 @@
 
         <div class="col-md-3 col-sm-6 mb-4">
             <a href="#">
-                <img class="img-fluid" src="../../../pictures/post%20malone%20album1.jpg" alt="">
+                <img class="img-fluid" src="../../pictures/post%20malone%20album1.jpg" alt="">
             </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
             <a href="#">
-                <img class="img-fluid" src="../../../pictures/post%20malone%20album2.jpg" alt="">
+                <img class="img-fluid" src="../../pictures/post%20malone%20album2.jpg" alt="">
             </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
             <a href="#">
-                <img class="img-fluid" src="../../../pictures/post%20malone%20album3.jpg" alt="">
+                <img class="img-fluid" src="../../pictures/post%20malone%20album3.jpg" alt="">
             </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
             <a href="#">
-                <img class="img-fluid" src="../../../pictures/post%20malone%20album4.jpg" alt="">
+                <img class="img-fluid" src="../../pictures/post%20malone%20album4.jpg" alt="">
             </a>
         </div>
 
     </div>
+
+
     <!-- /.row -->
 
 <!-- Call to Action Well -->
@@ -163,7 +161,7 @@
                             <div class="col-md-9 col-md-offset-0">
                                 <tr><td width="77%">
                                     <div class="">
-                                        <form class="form-horizontal" action="send.php" method="post">
+                                        <form class="form-horizontal" action="ViewArtist.php" method="post">
                                             <fieldset>
 
                                                 <!-- Name input-->
@@ -172,13 +170,12 @@
                                                     <div class="col-md-9">
                                                         <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
                                                     </div>
-                                                </div>
-
+                                                </div
                                                 <!-- Message body -->
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label" for="message">Your Review</label>
                                                     <div class="col-md-9">
-                                                        <textarea class="form-control" id="message" name="Review" placeholder="Please enter your Review here..." rows="5"></textarea>
+                                                        <input class="form-control" id="message" name="Review" placeholder="Please enter your Review here..." rows="5"></input>
                                                     </div>
                                                 </div>
 
@@ -302,9 +299,30 @@
             </div>
         </div>
     </div>
+
+    {*<div class="col-md-4 mb-4">*}
+        {*<div class="card h-100">*}
+            {*<div class="card-body">*}
+                {*<h2 class="card-title"><?php echo {$name}></h2>*}
+                {*<span class="fa fa-star checked"></span>*}
+                {*<span class="fa fa-star checked"></span>*}
+                {*<span class="fa fa-star checked"></span>*}
+                {*<span class="fa fa-star checked"></span>*}
+                {*<span class="fa fa-star"></span>*}
+                {*<p class="card-text">{$review}</p>*}
+            {*</div>*}
+            {*<div class="card-footer">*}
+
+            {*</div>*}
+        {*</div>*}
+    {*</div>*}
+
+    <?php echo {$review}>
 </div>
 
-</div>
+
+
+
 <!-- /.container -->
 
 <!-- Footer -->
