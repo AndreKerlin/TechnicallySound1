@@ -1,4 +1,4 @@
-<!DOCTYPE html>a
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>4 Col Portfolio - Start Bootstrap Template</title>
+    <title>Featured Artists</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,147 +33,39 @@
 <!-- Page Content -->
 <div class="container">
 
-    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-        <input class ="searchbar" type="text" placeholder="Search.." name="search2">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    <div class="row">
+        <div class = "col-md-4 offset-md-8">
+        <form class="example m-2" action="../featuredArtist.php" method="post">
+            <input class ="searchbar" type="text" placeholder="Search By Artist" name="search2">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        </div>
+    </div>
 
     <!-- Page Heading -->
     <h1 class="my-4">Featured Artists</h1>
 
     <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="http://localhost:63342/technicallysound(1)/ViewArtist.html?_ijt=7snho6nn2d8rcmq6hh4pgqghb8"><img class="card-img-top" src="../../pictures/post_malone%20.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="http://localhost:63342/technicallysound(1)/ViewArtist.html?_ijt=7snho6nn2d8rcmq6hh4pgqghb8">Post Malone</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-                    </h4>
+                <div class="row">
+                    {foreach $artist_list as $Artists}
+                    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                        <div class="card h-100">
+                            <a href="../ViewArtist.php"><img class="card-img-top" src="../../pictures/{$Artists['Picture_File']}" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="../ViewArtist.php?id={$Artists['Artist_ID']}">{$Artists['Artist_Name']}</a>
+                                    <a aria-label="Delete" class="btn btn-primary" href="#">
+                                        <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i></a>
+                                    <a aria-label="Delete" class="btn btn-danger" href="#">
+                                        <i aria-hidden class="fas fa-trash" title="Delete this item?"></i></a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    {/foreach}
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../../pictures/Adele.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Adele</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../../pictures/Drake.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Drake</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../../pictures/chance_the_rapper.png" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Chance the Rapper</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../../pictures/Taylor_swift.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Taylor Swift</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../../pictures/Johnny_Cash.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Johnny Cash</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../../pictures/Billy_Joel.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Billy Joel</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../../pictures/Freddie_mercury.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Freddie Mercury</a>
-                        <a aria-label="Delete" class="btn btn-primary" href="#">
-                            <i aria-hidden class="fas fa-plus" title="Add this Artist?"></i>
-                        </a>
-                        <a aria-label="Delete" class="btn btn-danger" href="#">
-                            <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
-                        </a>
-                        <!--<i href = "#" class="fa fa-plus-square fa-2x" aria-hidden="true"></i>-->
-                    </h4>
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- /.row -->
+
 
     <!-- Pagination -->
     <ul class="pagination justify-content-center">
@@ -199,6 +91,9 @@
             </a>
         </li>
     </ul>
+
+
+    </div>
 
 </div>
 <!-- /.container -->
